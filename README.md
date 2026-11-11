@@ -71,4 +71,6 @@ Clave inválida, con respuesta genérica `IA_NO_DISPONIBLE` (502):
 
 ## Entrega individual
 
-La guía original evalúa colaboración en pareja. Este repositorio se está desarrollando individualmente; no se inventan integrantes, revisiones, commits o pull requests de otra persona.
+Repositorio: https://github.com/kevinob03/lab5-express-swagger-claude
+
+La guía original evalúa colaboración en pareja. Este repositorio se desarrolla individualmente: no hubo pull request ni revisión de pareja. El código está en `main`; el nombre del estudiante debe completarse antes de la entrega final.

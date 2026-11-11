@@ -11,13 +11,17 @@
 - [ ] Completar el nombre del estudiante en README.
 - [x] Guardar en `docs/capturas/` las capturas de pregunta exitosa y clave inválida (casos ★).
 - [x] Registrar tokens de dos llamadas reales.
-- [ ] Revisar el estado final de Git y preparar la entrega.
+- [x] Revisar el estado final de Git y publicar el proyecto en `main`.
+- [ ] Completar el nombre del estudiante en README.
+- [ ] Entregar la coevaluación individual que indique el docente.
+- [ ] Consultar con el docente cómo adaptar el puntaje de colaboración al trabajo individual.
 
 ## Errores y observaciones
 
 - Una llamada de pregunta y otra de resumen a DeepSeek devolvieron respuesta; su uso se registró en README.
 - Al cambiar código, nodemon reinició el servidor y borró las notas en memoria. La nota de demostración se creó de nuevo después del reinicio.
-- No se realizaron commits ni pull requests. El proyecto se trabaja individualmente.
+- El commit `d58fcf3` fue publicado en `origin/main`.
+- No se creó pull request ni revisión de pareja porque el proyecto se trabaja individualmente.
 
 ## Conceptos trabajados
 
