@@ -68,7 +68,7 @@ export default function NotesPage() {
         <nav aria-label="Navegación principal"><a href="#notas">Mis notas</a><a href="#preguntar">Asistente IA</a><a className="docs-link" href="http://localhost:3000/api-docs" target="_blank" rel="noreferrer">Swagger ↗</a></nav>
       </header>
       <section className="hero" id="inicio">
-        <div className="hero-copy"><p className="eyebrow"><span className="status-dot" /> API REST · DEEPSEEK</p><h1>Tus ideas,<br /><span>bien organizadas.</span></h1><p className="hero-text">Guarda notas, resume lo importante y conversa con tu asistente de IA.</p><a className="primary-link" href="#notas">Explorar mis notas <span>↓</span></a></div>
+        <div className="hero-copy"><h1>Tus ideas,<br /><span>bien organizadas.</span></h1><p className="hero-text">Guarda notas, resume lo importante y conversa con tu asistente de IA.</p><a className="primary-link" href="#notas">Explorar mis notas <span>↓</span></a></div>
         <div className="hero-card" aria-label="Resumen del proyecto"><div className="card-orbit orbit-one" /><div className="card-orbit orbit-two" /><span className="spark spark-one">✦</span><span className="spark spark-two">✧</span><div className="hero-note"><span className="note-label">UNA IDEA PARA HOY</span><p>“El conocimiento crece cuando lo escribimos.”</p><span className="note-byline">— Cuaderno inteligente</span></div><div className="floating-pill"><span>✦</span> Resúmenes con IA</div></div>
       </section>
       {error && <div className="notice error-notice" role="alert">{error}</div>}
