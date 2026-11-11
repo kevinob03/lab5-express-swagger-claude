@@ -8,7 +8,7 @@
 - [x] Servicio DeepSeek y endpoints de pregunta y resumen.
 - [x] Documentación OpenAPI de siete operaciones.
 - [x] Verificación manual local del CRUD, validación y Swagger.
-- [ ] Completar el nombre del estudiante en README.
+- [x] Completar el nombre del estudiante en README con el nombre configurado en Git.
 - [x] Guardar en `docs/capturas/` las capturas de pregunta exitosa y clave inválida (casos ★).
 - [x] Registrar tokens de dos llamadas reales.
 - [x] Revisar el estado final de Git y publicar el proyecto en `main`.

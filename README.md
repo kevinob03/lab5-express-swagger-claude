@@ -4,7 +4,7 @@ API REST para crear, consultar, listar y eliminar notas. También permite enviar
 
 ## Autoría
 
-- Estudiante: completar con tu nombre.
+- Estudiante: kevinob03.
 - Modalidad: trabajo individual.
 - Integración IA: DeepSeek API.
 
@@ -73,4 +73,4 @@ Clave inválida, con respuesta genérica `IA_NO_DISPONIBLE` (502):
 
 Repositorio: https://github.com/kevinob03/lab5-express-swagger-claude
 
-La guía original evalúa colaboración en pareja. Este repositorio se desarrolla individualmente: no hubo pull request ni revisión de pareja. El código está en `main`; el nombre del estudiante debe completarse antes de la entrega final.
+La guía original evalúa colaboración en pareja. Este repositorio se desarrolla individualmente: no hubo pull request ni revisión de pareja.
