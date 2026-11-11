@@ -80,7 +80,7 @@ export default function NotesPage() {
         </div>
       </section>
       <section className="assistant-section" id="preguntar"><div className="assistant-intro"><p className="eyebrow">UNA MANO CUANDO LA NECESITAS</p><h2>Pregunta lo que quieras.</h2><p>DeepSeek responde desde tu backend. Tu clave nunca llega al navegador.</p></div><QuestionForm question={question} answer={answer} busy={busy} onQuestionChange={setQuestion} onSubmit={askDeepSeek} /></section>
-      <footer><span>Notas con IA</span><span>Express · SQLite · React · DeepSeek</span><a href="http://localhost:3000/api-docs" target="_blank" rel="noreferrer">Documentación API ↗</a></footer>
+      <footer><span>Notas con IA</span><span>Express · SQLite · React · DeepSeek</span><a href="http://localhost:3000/api-docs" target="_blank" rel="noreferrer">Documentación API ↗</a><span aria-hidden="true" style={{ display: 'none' }}>&#x20;</span></footer>
     </main>
   )
 }
