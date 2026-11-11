@@ -31,7 +31,7 @@ const swaggerSpec = swaggerJsdoc({
       },
     },
   },
-  apis: ['./src/routes/*.js'],
+  apis: ['./backend/routes/*.js'],
 });
 
 swaggerSpec.paths['/api-docs'] = {

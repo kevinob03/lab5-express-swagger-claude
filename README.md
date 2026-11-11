@@ -48,6 +48,25 @@ SQLite guarda las notas en `data/notas.db`. El backend crea el directorio y la t
 
 La interfaz React permite crear, listar, resumir y eliminar notas, y preguntar a DeepSeek. En desarrollo, Vite reenvía `/api` a Express; la clave de DeepSeek permanece en el backend.
 
+## Estructura del proyecto
+
+```text
+frontend/src/
+  components/   formularios y lista de notas
+  pages/        página principal
+  routes/       entrada de rutas de la interfaz
+  App.jsx       componente raíz
+  main.jsx      montaje de React
+
+backend/
+  models/       acceso a SQLite
+  controller/   lógica de solicitudes HTTP
+  routes/       rutas y documentación OpenAPI
+  services/     integración con DeepSeek
+  app.js        configuración de Express
+  index.js      inicio del servidor
+```
+
 ## Endpoints
 
 | Método | Ruta | Función |

@@ -7,6 +7,7 @@
 - [x] CRUD de notas con validación Zod y errores centralizados.
 - [x] Persistencia de notas en SQLite.
 - [x] Página frontend React con Vite conectada a la API.
+- [x] Modularización de frontend y backend en componentes, páginas, rutas, modelos y controladores.
 - [x] Build del frontend y persistencia comprobada después de reiniciar Express.
 - [x] Servicio DeepSeek y endpoints de pregunta y resumen.
 - [x] Documentación OpenAPI de siete operaciones.

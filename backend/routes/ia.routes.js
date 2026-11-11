@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { z } = require('zod');
 const validar = require('../middlewares/validar');
-const deepseek = require('../services/deepseek.service');
+const controller = require('../controller/ia.controller');
 
 const preguntaSchema = z.object({
   pregunta: z.string().min(3).max(2000),
@@ -23,9 +23,6 @@ const preguntaSchema = z.object({
  *       400: { description: Pregunta inválida }
  *       502: { description: DeepSeek no disponible }
  */
-router.post('/preguntar', validar(preguntaSchema), async (req, res) => {
-  const resultado = await deepseek.preguntar(req.body.pregunta);
-  res.json(resultado);
-});
+router.post('/preguntar', validar(preguntaSchema), controller.preguntar);
 
 module.exports = router;

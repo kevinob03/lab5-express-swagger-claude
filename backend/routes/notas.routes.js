@@ -1,8 +1,7 @@
 const router = require('express').Router();
 const { z } = require('zod');
 const validar = require('../middlewares/validar');
-const notas = require('../services/notas.service');
-const deepseek = require('../services/deepseek.service');
+const controller = require('../controller/notas.controller');
 
 const notaSchema = z.object({
   titulo: z.string().min(1).max(100),
@@ -19,7 +18,7 @@ const notaSchema = z.object({
  *       200:
  *         description: Lista de notas
  */
-router.get('/', (req, res) => res.json(notas.listar()));
+router.get('/', controller.listar);
 
 /**
  * @openapi
@@ -36,9 +35,7 @@ router.get('/', (req, res) => res.json(notas.listar()));
  *       200: { description: Nota encontrada }
  *       404: { description: Nota no encontrada }
  */
-router.get('/:id', (req, res) => {
-  res.json(notas.buscar(Number(req.params.id)));
-});
+router.get('/:id', controller.obtener);
 
 /**
  * @openapi
@@ -55,9 +52,7 @@ router.get('/:id', (req, res) => {
  *       201: { description: Nota creada }
  *       400: { description: Datos inválidos }
  */
-router.post('/', validar(notaSchema), (req, res) => {
-  res.status(201).json(notas.crear(req.body));
-});
+router.post('/', validar(notaSchema), controller.crear);
 
 /**
  * @openapi
@@ -74,10 +69,7 @@ router.post('/', validar(notaSchema), (req, res) => {
  *       204: { description: Nota eliminada }
  *       404: { description: Nota no encontrada }
  */
-router.delete('/:id', (req, res) => {
-  notas.eliminar(Number(req.params.id));
-  res.status(204).end();
-});
+router.delete('/:id', controller.eliminar);
 
 /**
  * @openapi
@@ -95,13 +87,6 @@ router.delete('/:id', (req, res) => {
  *       404: { description: Nota no encontrada }
  *       502: { description: DeepSeek no disponible }
  */
-router.post('/:id/resumen', async (req, res) => {
-  const nota = notas.buscar(Number(req.params.id));
-  const resultado = await deepseek.preguntar(
-    nota.contenido,
-    'Resume el texto en 3 viñetas breves, en español.'
-  );
-  res.json({ notaId: nota.id, resumen: resultado.respuesta, uso: resultado.uso });
-});
+router.post('/:id/resumen', controller.resumir);
 
 module.exports = router;
