@@ -3,6 +3,7 @@ import NoteForm from '../components/NoteForm.jsx'
 import NotesList from '../components/NotesList.jsx'
 import QuestionForm from '../components/QuestionForm.jsx'
 import './NotesPage.css'
+import '../dark-theme.css'
 
 async function requestJson(url, options) {
   const response = await fetch(url, {

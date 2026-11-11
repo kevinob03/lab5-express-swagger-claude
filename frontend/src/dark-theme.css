@@ -1,0 +1,44 @@
+body { background: #101713; color: #e4ece7; }
+.page-shell { color: #dce6df; }
+.topbar { border-color: #2a3931; }
+.brand { color: #edf4ef; }
+.brand-light,.topbar nav a { color: #aab8af; }
+.topbar nav a:hover,.docs-link { color: #91c5a6 !important; }
+.brand-mark { background: #263d31; color: #a5d4b6; }
+.eyebrow { color: #9ab9a5; }
+.status-dot { background: #72c394; box-shadow: 0 0 0 4px #294333; }
+.hero h1,.section-heading h2,.assistant-intro h2 { color: #ecf2ed; }
+.hero h1 span { color: #9ac9a9; }
+.hero-text,.assistant-intro>p:last-child { color: #a4b1a9; }
+.primary-link { background: #397c5b; }
+.hero-card { background: #20362a; }
+.card-orbit { border-color: #ffffff18; }
+.hero-note { background: #18251d; border-color: #3a5143; }
+.hero-note p { color: #e0ece3; }
+.note-byline,.note-label { color: #a6c2ad; }
+.floating-pill { background: #1c2a22; border-color: #394a3e; color: #d5e1d8; }
+.workspace { border-color: #2a3931; }
+.count-badge,.icon-tile { background: #25372c; color: #acd0b4; }
+.panel { background: #19221d; border-color: #2c3b32; }
+.panel-title h3,.note-card h3 { color: #e7eee9; }
+.panel-title p,.note-content { color: #aab7af; }
+.create-panel label,.assistant-panel label { color: #c2cec6; }
+.create-panel input,.create-panel textarea,.question-row input { background: #111915; border-color: #35453b; color: #e2ebe5; }
+.create-panel input::placeholder,.create-panel textarea::placeholder,.question-row input::placeholder { color: #819087; }
+.create-panel input:focus,.create-panel textarea:focus,.question-row input:focus { border-color: #7fb592; box-shadow: 0 0 0 3px #294332; }
+.form-footer>span,.note-number { color: #9caea2; }
+.icon-button { color: #b0bcb4; }
+.text-button { color: #9ed2ad; }
+.text-button:hover { color: #c3ebce; }
+.empty-state { border-color: #37483d; color: #acb9b0; }
+.empty-state h3 { color: #d7e3da; }
+.summary-box,.answer-box { background: #223329; }
+.summary-box p,.answer-box p { color: #e0e9e2; }
+.summary-box small,.answer-box small { color: #a6b8aa; }
+.summary-label { color: #a6d3b3; }
+.assistant-section { background: #18251d; }
+.assistant-panel { background: #202d24; border-color: #35483a; }
+.dark-button { background: #397c5b; }
+footer { color: #9eada3; }
+footer span:first-child,footer a { color: #aad1b5; }
+.error-notice { background: #472b28; color: #ffd3c9; }

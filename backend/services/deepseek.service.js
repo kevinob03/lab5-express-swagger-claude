@@ -22,6 +22,7 @@ async function preguntar(texto, system) {
   const respuesta = await obtenerCliente().chat.completions.create({
     model: process.env.DEEPSEEK_MODEL || 'deepseek-flash',
     max_tokens: 1024,
+    thinking: { type: 'disabled' },
     messages: [
       {
         role: 'system',
@@ -31,8 +32,20 @@ async function preguntar(texto, system) {
     ],
   });
 
+  const mensaje = respuesta.choices[0]?.message;
+  const contenido = mensaje?.content;
+  const respuestaTexto = typeof contenido === 'string'
+    ? contenido.trim()
+    : Array.isArray(contenido)
+      ? contenido.filter((bloque) => bloque.type === 'text').map((bloque) => bloque.text).join('\n').trim()
+      : '';
+
+  if (!respuestaTexto) {
+    throw new AppError(502, 'DeepSeek no devolvió una respuesta de texto. Intenta nuevamente.');
+  }
+
   return {
-    respuesta: respuesta.choices[0]?.message?.content || '',
+    respuesta: respuestaTexto,
     uso: {
       input_tokens: respuesta.usage?.prompt_tokens ?? 0,
       output_tokens: respuesta.usage?.completion_tokens ?? 0,
