@@ -5,21 +5,22 @@
 - [x] Preparación del proyecto, dependencias y estructura.
 - [x] Configuración base de Express y Swagger UI.
 - [x] CRUD de notas con validación Zod y errores centralizados.
+- [x] Persistencia de notas en SQLite.
+- [x] Página frontend React con Vite conectada a la API.
+- [x] Build del frontend y persistencia comprobada después de reiniciar Express.
 - [x] Servicio DeepSeek y endpoints de pregunta y resumen.
 - [x] Documentación OpenAPI de siete operaciones.
 - [x] Verificación manual local del CRUD, validación y Swagger.
-- [x] Completar el nombre del estudiante en README con el nombre configurado en Git.
 - [x] Guardar en `docs/capturas/` las capturas de pregunta exitosa y clave inválida (casos ★).
 - [x] Registrar tokens de dos llamadas reales.
 - [x] Revisar el estado final de Git y publicar el proyecto en `main`.
-- [ ] Completar el nombre del estudiante en README.
 - [ ] Entregar la coevaluación individual que indique el docente.
 - [ ] Consultar con el docente cómo adaptar el puntaje de colaboración al trabajo individual.
 
 ## Errores y observaciones
 
 - Una llamada de pregunta y otra de resumen a DeepSeek devolvieron respuesta; su uso se registró en README.
-- Al cambiar código, nodemon reinició el servidor y borró las notas en memoria. La nota de demostración se creó de nuevo después del reinicio.
+- Las notas ahora persisten en SQLite; una prueba confirmó que permanecen tras reiniciar Express.
 - El commit `d58fcf3` fue publicado en `origin/main`.
 - No se creó pull request ni revisión de pareja porque el proyecto se trabaja individualmente.
 

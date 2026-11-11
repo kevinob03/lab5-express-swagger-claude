@@ -1,6 +1,6 @@
 # Laboratorio 5: API REST con Express, Swagger y DeepSeek
 
-API REST para crear, consultar, listar y eliminar notas. También permite enviar preguntas a DeepSeek y resumir el contenido de una nota.
+Aplicación full stack para crear, consultar, listar y eliminar notas con una página React. También permite enviar preguntas a DeepSeek y resumir notas. Express sirve la API y SQLite conserva los datos después de reiniciar el servidor.
 
 ## Autoría
 
@@ -17,10 +17,17 @@ API REST para crear, consultar, listar y eliminar notas. También permite enviar
 
 ```bash
 npm install
-npm run dev
+npm install --prefix frontend
 ```
 
-La documentación interactiva queda disponible en `http://localhost:3000/api-docs`.
+Inicia el backend y el frontend en dos terminales distintas:
+
+```bash
+npm run dev
+npm run dev:frontend
+```
+
+La página queda en `http://localhost:5173` y Swagger en `http://localhost:3000/api-docs`. Para compilar la página para Express, ejecuta `npm run build:frontend`; Express sirve el resultado desde `frontend/dist`.
 
 ## Variables de entorno
 
@@ -29,8 +36,17 @@ Configura estas variables en un archivo local `.env`. No compartas ni subas ese 
 - `DEEPSEEK_API_KEY`
 - `DEEPSEEK_MODEL`
 - `PORT`
+- `DATABASE_PATH`
 
-Usa `.env.example` como referencia. `.gitignore` excluye `.env` y `node_modules/`.
+Usa `.env.example` como referencia. `.gitignore` excluye `.env`, `node_modules/` y el archivo local de SQLite.
+
+## Base de datos
+
+SQLite guarda las notas en `data/notas.db`. El backend crea el directorio y la tabla `notas` si no existen. Ese archivo persiste entre reinicios y no se sube a GitHub.
+
+## Frontend
+
+La interfaz React permite crear, listar, resumir y eliminar notas, y preguntar a DeepSeek. En desarrollo, Vite reenvía `/api` a Express; la clave de DeepSeek permanece en el backend.
 
 ## Endpoints
 
@@ -44,11 +60,11 @@ Usa `.env.example` como referencia. `.gitignore` excluye `.env` y `node_modules/
 | POST | `/api/notas/:id/resumen` | Resume una nota en tres viñetas |
 | GET | `/api-docs` | Abre Swagger UI |
 
-Las notas se almacenan en memoria y se reinician al reiniciar el servidor.
+Las notas se almacenan en SQLite y permanecen después de reiniciar el servidor.
 
 ## Verificación realizada
 
-Pruebas manuales locales realizadas: crear nota (`201`), listar (`200`), body inválido (`400`), nota inexistente (`404`), eliminar (`204`) y Swagger UI (`200`). Pregunta y resumen devolvieron respuestas reales de DeepSeek. La pregunta usó 54 tokens de entrada y 84 de salida; el resumen usó 73 tokens de entrada y 121 de salida.
+Verificado: build de React, frontend servido por Express (`200`), CRUD y validación, Swagger (`200`), respuesta de pregunta y resumen de DeepSeek. Una nota siguió disponible tras reiniciar el backend. La pregunta usó 54 tokens de entrada y 84 de salida; el resumen usó 73 tokens de entrada y 121 de salida.
 
 ## Capturas
 
